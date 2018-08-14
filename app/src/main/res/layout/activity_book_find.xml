@@ -1,5 +1,59 @@
-<ListView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/list"
-    android:orientation="vertical"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical"
+    tools:context=".BookFindActivity">
+
+    <LinearLayout
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@color/colorPrimary"
+        android:layout_marginBottom="5dp">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/book_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:hint="@string/search"
+            android:maxLines="1"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/hint_color"
+            android:layout_weight="3"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"/>
+
+        <ImageButton
+            android:id="@+id/button_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/ic_action_search"
+            android:layout_margin="4dp"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/books_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="5dp" />
+
+    <TextView
+        android:id="@+id/empty_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center" />
+
+</LinearLayout>

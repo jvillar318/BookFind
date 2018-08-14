@@ -3,14 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/book_list_background"
+    android:padding="8dp">
 
     <TextView
         android:id="@+id/book_title"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        tools:text="Book Title"/>
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        tools:text="Book Title" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,26 +24,78 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/author"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            tools:text="Author"/>
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/publisher"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            tools:text="Publisher"/>
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:padding="8dp"
+                android:src="@drawable/content"/>
 
-        <TextView
-            android:id="@+id/publishedDate"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            tools:text="Published Date"/>
+            <RatingBar
+                android:id="@+id/rating"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:transformPivotX="0dp"
+                android:transformPivotY="0dp"
+                android:isIndicator="true"
+                android:max="5" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/book_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:paddingRight="8dp"
+                android:maxLines="3"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                tools:text="Here's what Web designers need to know to create dynamic" />
+
+            <TextView
+                android:id="@+id/author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                tools:text="Author" />
+
+            <TextView
+                android:id="@+id/publisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="12sp"
+                tools:text="Publisher" />
+
+            <TextView
+                android:id="@+id/publishedDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/publisher"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="12sp"
+                tools:text="Published Date" />
+
+        </RelativeLayout>
 
     </LinearLayout>
 

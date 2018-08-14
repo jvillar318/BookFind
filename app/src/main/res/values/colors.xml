@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="main_background">#232B3F</color>
+    <color name="text_color">#ffffff</color>
+    <color name="hint_color">#9FB9F6</color>
+    <color name="white_gray_color">#ADB5C7</color>
+    <color name="book_list_background">#FFFFFF</color>
 </resources>
